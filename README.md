@@ -1,4 +1,4 @@
-# Mars–Earth lithopanspermia: continuous biological survival landscapes
+# Mars & Earth lithopanspermia: continuous biological survival landscapes
 
 **Bilal Talha Özturk** | September 2026
 
