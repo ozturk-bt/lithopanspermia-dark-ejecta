@@ -19,7 +19,7 @@ fine, everything above that is dead. That was a reasonable call in 2000 when
 there wasn't much data.
 
 The problem is that Meyer et al. (2011) actually measured *B. subtilis* spore
-survival at different shock pressures in gabbro — 60% at 5 GPa, 12% at 10 GPa.
+survival at different shock pressures in gabbro 60% at 5 GPa, 12% at 10 GPa.
 Not zero. So I replaced the step function with that curve, added a
 radiation shielding model, and convolved with Gladman's (1997) transfer time
 distribution. The correction factor relative to Mileikowsky comes out to
@@ -27,8 +27,8 @@ about 10×. That's the main result.
 
 The side finding I think is more interesting: the pressure range where
 biology says "this is survivable" and the pressure range where geology says
-"this is how we spot Mars rocks" are almost completely opposite. Maskelynite —
-the glassy mineral that's basically our main way to identify Martian meteorites —
+"this is how we spot Mars rocks" are almost completely opposite. Maskelynite
+the glassy mineral that's basically our main way to identify Martian meteorites
 only forms above about 20 GPa. But most of the biological weight in the
 model sits below 15 GPa. Which means there's probably a population of Martian
 material sitting in collections that nobody's identified yet because it looks
@@ -55,14 +55,14 @@ Those last three rows all converge near 19–20 GPa. That's what Figure 1 shows.
 
 ## Figures
 
-`fig1_hero_crossing_pressure.png` — the main one. Biological weight Y(P) and
+`fig1_hero_crossing_pressure.png` the main one. Biological weight Y(P) and
 geological detection D_geo(P) crossing at 19.3 GPa, with the Yu 2024
 maskelynite range and NWA 8159's shock pressure both landing right there.
 
-`fig2_correction_factor_distribution.png` — Monte Carlo distribution of C.
+`fig2_correction_factor_distribution.png` Monte Carlo distribution of C.
 Every single run came out above 5.
 
-`fig3_dark_ejecta_zones.png` — the mismatch between what the model says
+`fig3_dark_ejecta_zones.png` the mismatch between what the model says
 matters biologically and what actually ends up in the meteorite catalog.
 
 ---
@@ -78,7 +78,7 @@ python analysis/main.py
 
 Takes a few minutes because of the MC iterations. Figures go to `figures/`.
 
-Main parameters at the top of `main.py` — radiation model values are straight
+Main parameters at the top of `main.py` radiation model values are straight
 from Mileikowsky, gamma is the fragment size exponent, Gladman distribution
 uses log-mean = ln(5) Myr.
 
@@ -100,7 +100,7 @@ hydrocode numbers to back up the specific exponent.
 
 The D_geo model (logistic centered at 22 GPa) is a simplification. Nakhlites
 were identified without maskelynite through geochemistry, so in reality the
-geological detection function doesn't go to zero below 22 GPa — it's just
+geological detection function doesn't go to zero below 22 GPa it's just
 much lower. This means the actual sampling bias is real but probably not as
 extreme as the model implies. The blind prediction test confirms this: the
 model predicts a collection center of ~42 GPa, the actual collection is
@@ -116,7 +116,7 @@ pressure range (15–23 GPa, Sharp et al. 2019) sits right at the model
 P_cross. That's either a meaningful coincidence or just a coincidence.
 
 I want to be clear that NWA 8159 was found in 2015, years before this
-analysis. So this isn't a prediction I made — it's a consistency check.
+analysis. So this isn't a prediction I made it's a consistency check.
 The actual prediction is that there should be Martian basalt with *no*
 maskelynite at all (P < 15 GPa), fully crystalline plagioclase, which
 nobody's found yet. Finding that would actually confirm the model.
@@ -140,7 +140,7 @@ The Mileikowsky et al. (2000) estimate of viable Mars-to-Earth ejecta has been
 the field's quantitative baseline for 25 years. It rests on a binary biological
 assumption that experimental data published since then doesn't support. Meyer
 et al. (2011) measured *B. subtilis* spore survival continuously across shock
-pressures in gabbro — 60% at 5 GPa, 12% at 10 GPa. Yu et al. (2024) showed
+pressures in gabbro 60% at 5 GPa, 12% at 10 GPa. Yu et al. (2024) showed
 that maskelynite forms under single-shock conditions at 17–22 GPa, substantially
 lower than assumed from earlier reverberant experiments.
 
@@ -158,8 +158,8 @@ independent constraints converge near 19–20 GPa: the model crossing pressure
 (19.3 GPa), the Yu et al. (2024) maskelynite range (17–22 GPa), and the shock
 pressure of NWA 8159 (15–23 GPa), the first Martian meteorite with partial
 crystalline plagioclase. This is a consistency test rather than a prospective
-prediction. The actual falsifiable prediction — Martian basalt with fully
-crystalline plagioclase at P < 15 GPa — hasn't been found yet. Table 1 gives
+prediction. The actual falsifiable prediction Martian basalt with fully
+crystalline plagioclase at P < 15 GPa hasn't been found yet. Table 1 gives
 a five-criterion identification protocol.
 
 Astrobiology is the right venue given the combination of shock biology, ejecta
@@ -178,10 +178,10 @@ Bilal Talha Özturk
 Hard to find one person who knows impact physics, shock biology, and Mars
 petrology all at once, so mix-and-match works fine.
 
-- Charles Cockell (Edinburgh) — shock survival, astrobiology generally
-- Natasha Artemieva (PSI) — Mars ejecta simulations
-- Caroline Smith (NHM London) — Mars meteorites
-- Vera Assis Fernandes (MfN Berlin) — meteorite geochronology
+- Charles Cockell (Edinburgh) shock survival, astrobiology generally
+- Natasha Artemieva (PSI) Mars ejecta simulations
+- Caroline Smith (NHM London) Mars meteorites
+- Vera Assis Fernandes (MfN Berlin) meteorite geochronology
 
 Avoid: Meyer et al. 2011 group and Mileikowsky 2000 group (used their work
 or correcting it). Chris Herd (Alberta) would be ideal for the NWA 8159
@@ -191,17 +191,17 @@ context but wrote the NWA 8159 paper so there's an obvious conflict.
 
 ## Things I'd do differently with more time
 
-- **1–5 GPa experiment** — this is the most important thing. Someone needs to
+- **1–5 GPa experiment** this is the most important thing. Someone needs to
   measure B. subtilis in gabbro at 1, 2, 3, 4 GPa. I've tried to frame it as
   an experimental priority in the paper.
 
-- **Turyshev (2026) comparison** — there's a recent preprint (arXiv 2604.03916)
+- **Turyshev (2026) comparison** there's a recent preprint (arXiv 2604.03916)
   that also revisits the Mileikowsky framework. I couldn't get the full text in
   time for a proper comparison. They use a different approach (F_bur parameter
   rather than continuous S(P)) so the results aren't directly comparable, but
   a side-by-side would be useful.
 
-- **ANSMET catalog** — worth going through the anomalous basaltic achondrites in
+- **ANSMET catalog** worth going through the anomalous basaltic achondrites in
   the Meteoritical Bulletin database and checking Fe/Mn ratios. Might already
   be some candidates sitting there unrecognized.
 
